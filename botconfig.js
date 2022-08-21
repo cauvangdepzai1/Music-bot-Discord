@@ -1,16 +1,16 @@
 module.exports = {
   Admins: ["UserID", "UserID"], // Admins of the bot, I don't know what this do. -Darren.
-  ExpressServer: true, // If you wanted to make the website run or not
-  DefaultPrefix: process.env.Prefix || "c!", // Default prefix, Server Admins can change the prefix
-  Port: 3000, //Which port website gonna be hosted
-  SupportServer: "https://discord.gg/AxZBNEkRtw", // Support Server Link
-  Token: process.env.Token || "", // Discord Bot Token
-  ClientID: process.env.Discord_ClientID || "", // Discord Client ID
-  ClientSecret: process.env.Discord_ClientSecret || "", // Discord Client Secret
-  Scopes: ["identify", "guilds", "applications.commands"], // Discord OAuth2 Scopes
-  ServerDeafen: true, // If you want bot to stay deafened
-  DefaultVolume: 100, // Sets the default volume of the bot, You can change this number anywhere from 1 to 9007199254740991 (JS Integer limit. If you do set it to that, you're a monster.)
-  CallbackURL: "/api/callback", // Discord API Callback url. Do not touch it if you don't know what you are doing. All you need to change for website to work is on line 20.
+  ExpressServer: true, // bat hoac tat website cua bot (nen de de co the dung thu thuat cho bot online 24/7)
+  DefaultPrefix: process.env.Prefix || "c!", // perfix cua bot co the doi neu thich (ex: c!play)
+  Port: 3000, //port de host bot (ko nen doi)
+  SupportServer: "https://discord.gg/AxZBNEkRtw", // de link server discord nao cx dc
+  Token: process.env.Token || "", // Discord Bot Token (lay ben discord develpoer portual)
+  ClientID: process.env.Discord_ClientID || "", // Discord Client ID (lay ben discord develpoer portual)
+  ClientSecret: process.env.Discord_ClientSecret || "", // Discord Client Secret (lay ben discord develpoer portual)
+  Scopes: ["identify", "guilds", "applications.commands"], // ko can de y (doi la pay bot)
+  ServerDeafen: true, // nen de de tranh bot thanh cong cu nghe len
+  DefaultVolume: 100, // Sets am luong mac dinh cho bot nhac
+  CallbackURL: "/api/callback", // ko can de y (doi la pay bot)
   "24/7": false, // Make the bot stays in VC 24/7 (when you reboot the bot will **not** automatically rejoin.)
   CookieSecret: "Pikachu is cute", // A cookie for you, cookie for me. make sure you change this value!
   IconURL:
@@ -21,25 +21,26 @@ module.exports = {
   // If you get invalid oauth, make sure on the discord developer page you set the oauth url to something like: https://example.com/api/callback.
 
   Presence: {
-    status: "dnd", // You can show online, idle, and dnd
-    name: "Playing Music in {server}", // The message shown
-    type: "LISTENING", // PLAYING, WATCHING, LISTENING, STREAMING
+    status: "online", //trang thai cua bot (online, idle, dnd)
+    name: "Playing Music", // trang thai hoat dong cua bot (vi du: Dang choi Playing music)
+    type: "LISTENING", // PLAYING, WATCHING, LISTENING, STREAMING (trang thai bot: Dang choi, Dang xem, Dang nghe, Dang stream)
   },
 
   // You need a lavalink server for this bot to work!!!!
   // Lavalink server; public lavalink -> https://lavalink-list.darrennathanael.com/; create one yourself -> https://darrennathanael.com/post/how-to-lavalink
+  //luu y de bot chay dc can 1 server lavalink (lay ip server public tai https://lavalink.darrennathanael.com/SSL/lavalink-with-ssl/ )
   Lavalink: {
-    id: "Main", //- Used for indentifier. You can set this to whatever you want.
-    host: "lavalink.oops.wtf", //- The host name or IP of the lavalink server.
-    port: 443, // The port that lavalink is listening to. This must be a number!
-    pass: "www.freelavalink.ga", //- The password of the lavalink server.
+    id: "Main", //ko can de y (doi la pay bot)
+    host: "lavalink.oops.wtf", //ip server lavalink
+    port: 443, //port server lavalink
+    pass: "www.freelavalink.ga", //pass cua server lavalink
     secure: true, // Set this to true if the lavalink uses SSL. if not set it to false.
-    retryAmount: 200, //- The amount of times to retry connecting to the node if connection got dropped.
-    retryDelay: 40, //- Delay between reconnect attempts if connection is lost.
+    retryAmount: 200, //ko nen doi
+    retryDelay: 40, //ko nen doi
   },
-  // Spotify Integration, allows you to enter a spotify link.
+  // Spotify Integration (module giup phat nhac tu spotify, can co 2 loai id quan trong tai https://developer.spotify.com/dashboard/)
   Spotify: {
-    ClientID: process.env.Spotify_ClientID || "e41cbc45a7784d80837375386984b3ca", // Spotify Client ID
-    ClientSecret: process.env.Spotify_ClientSecret || "63e9ed2ff2e3478bb9f2b05ce01cc0a3", // Spotify Client Secret
+    ClientID: process.env.Spotify_ClientID || "e41cbc45a7784d80837375386984b3ca", // Spotify Client ID (lay tai https://developer.spotify.com/dashboard/)
+    ClientSecret: process.env.Spotify_ClientSecret || "63e9ed2ff2e3478bb9f2b05ce01cc0a3", // Spotify Client Secret (lay id tai https://developer.spotify.com/dashboard/)
   },
 };
